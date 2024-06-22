@@ -8,6 +8,7 @@ function m() {
   var below = document.getElementById("below");
 
   below.parentElement.insertBefore(actions, below);
+  player.style.marginBottom = "10px";
 }
 
 setTimeout(m, 5000);
