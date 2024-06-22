@@ -3,7 +3,7 @@ ytuichange - Youtube UI change fixer
 我的其中一個 youtube 帳號，在 2024-06-22 之後網頁界面變得怪怪的。其他帳號都是正常舊版界面。
 這個 Web Extension 可以把「讚」跟同接數字拉回影片下方。
 
-[doc/screen1.png]
+![screen](doc/screen1.png)
 
 ## 安裝方式
 
