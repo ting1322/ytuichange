@@ -5,11 +5,14 @@ function m() {
   var player = document.getElementById("player");
   var below = document.getElementById("below");
   var info = document.getElementById("info-container");
+  var desc = document.querySelector("div#description");
 
   if (actions == null ||
       player == null ||
       below == null ||
-      info == null) {
+      info == null ||
+      desc == null) {
+
     setTimeout(m, 1000);
     return;
   }
@@ -20,7 +23,7 @@ function m() {
   var infodiv = document.createElement('div');
   infodiv.style.color="white";
   below.parentElement.insertBefore(infodiv, below);
-  infodiv.appendChild(info);
+  infodiv.appendChild(desc);
 }
 
 setTimeout(m, 3000);
