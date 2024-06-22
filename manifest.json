@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "yt UI change",
+  "description": "change youtube UI",
+  "version": "0.0.1",
+  "icons": {
+    "64": "icons/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/watch?v=*"
+      ],
+      "js": [
+        "content_script.js"
+      ]
+    }
+  ]
+}
