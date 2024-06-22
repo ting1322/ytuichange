@@ -2,13 +2,25 @@
 
 function m() {
   var actions = document.getElementById("actions-inner");
-
   var player = document.getElementById("player");
-
   var below = document.getElementById("below");
+  var info = document.getElementById("info-container");
+
+  if (actions == null ||
+      player == null ||
+      below == null ||
+      info == null) {
+    setTimeout(m, 1000);
+    return;
+  }
 
   below.parentElement.insertBefore(actions, below);
   player.style.marginBottom = "10px";
+
+  var infodiv = document.createElement('div');
+  infodiv.style.color="white";
+  below.parentElement.insertBefore(infodiv, below);
+  infodiv.appendChild(info);
 }
 
-setTimeout(m, 5000);
+setTimeout(m, 3000);
