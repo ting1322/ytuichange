@@ -26,4 +26,15 @@ function m() {
   infodiv.appendChild(desc);
 }
 
+(function(history){
+    var pushState = history.pushState;
+    history.pushState = function(state) {
+      // YOUR CUSTOM HOOK / FUNCTION
+      console.log('I am called from pushStateHook');
+      if (/\/(watch|live)/.test(document.URL))
+        setTimeout(m, 3000);
+      return pushState.apply(history, arguments);
+    };
+})(window.history);
+
 setTimeout(m, 3000);
