@@ -9,7 +9,6 @@ function m() {
     //var chatContainer = document.querySelector("div#chat-container");
     var chatroom = document.querySelector("ytd-live-chat-frame#chat");
 
-    chatroom.style.visibility = "visible";
 
     if (actions == null ||
         player == null ||
@@ -18,15 +17,23 @@ function m() {
         desc == null ||
         chatroom == null) {
 
+        console.log("try again");
+
         setTimeout(m, 3000);
         return;
     }
 
-    actions.remove();
-    below.parentElement.insertBefore(actions, below);
-    player.style.marginBottom = "10px";
+    if (chatroom.style != null) {
+        chatroom.style.visibility = "visible";
+    }
 
-    desc.remove();
+    //actions.remove();
+    below.parentElement.insertBefore(actions, below);
+    if (player.style != null) {
+        player.style.marginBottom = "10px";
+    }
+
+    //desc.remove();
     var infodiv = document.createElement('div');
     infodiv.style.color = "white";
     below.parentElement.insertBefore(infodiv, below);
