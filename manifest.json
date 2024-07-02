@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "yt UI change",
   "description": "change youtube UI",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "icons": {
     "64": "icons/icon.png"
   },
